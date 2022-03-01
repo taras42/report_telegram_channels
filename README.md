@@ -3,7 +3,7 @@ Easily report multiple telegram channels
 Легко оскаржуйте декілька телеграм каналів одночасно
 
 ## ENG
-Attention: use on your own risk - telegram might ban your account if you will use this app to report huge amount of accounts in short time.
+Attention: use on your own risk - While the script will sleep 10 to 20 seconds between requests and 50 to 60 seconds between each 10 requests, telegram might ban your account if you will use this app to report huge amount of accounts in short time.
 It's better to use separate telegram account to use this app.
 
 Follow instructions [here](https://core.telegram.org/api/obtaining_api_id) 
@@ -33,7 +33,7 @@ python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @ch
 
 ## UKR:
 
-Увага: використовуйте на свій страх і ризик - телеграм може заблокувати ваш аккаунт якщо ви будете повідомляти про велику кількість аккаунтів за малий час.
+Увага: використовуйте на свій страх і ризик - Програма буде очікувати від 10 до 20 секунд між кожним запитом і 5 від 50 до 60 секунд кожні 10 запитів щоб змешити ризики, телеграм може заблокувати ваш аккаунт якщо ви будете повідомляти про велику кількість аккаунтів за малий час.
 Краще зробити окремий телеграм акканунт для використання цієї програми.
 
 Слідуйте інструкціям [тут](https://core.telegram.org/api/obtaining_api_id)
