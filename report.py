@@ -15,7 +15,7 @@ async def main():
 
   await client.start()
 
-  for p in peers:
+  for idx, p in enumerate(peers):
     result = None
 
     try:
@@ -31,6 +31,12 @@ async def main():
 
       print('sleep for {}s...'.format(sleep_for))
       time.sleep(sleep_for)
+
+      if idx > 0 and not idx % 10:
+        sleep_for = random.randint(50, 60)
+
+        print('sleep for {}s before the next batch of 10'.format(sleep_for))
+        time.sleep(sleep_for)
     except:
       print('no user', p)
       continue
