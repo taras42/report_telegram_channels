@@ -14,11 +14,17 @@ async def main():
   await client.start()
 
   for p in peers:
-    result = await client(functions.account.ReportPeerRequest(
-      peer=p,
-      reason=types.InputReportReasonOther(),
-      message=message
-    ))
+    result = None
+
+    try:
+      result = await client(functions.account.ReportPeerRequest(
+        peer=p,
+        reason=types.InputReportReasonOther(),
+        message=message
+      ))
+    except:
+      print('no user', p)
+      continue
 
     print(p, result)
 
