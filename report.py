@@ -2,10 +2,11 @@ import sys
 import asyncio
 from telethon import TelegramClient, events, functions, types
 
-peers = sys.argv[3:]
+peers = sys.argv[4:]
 
 api_id = sys.argv[1]
 api_hash = sys.argv[2]
+message = sys.argv[3]
 
 async def main():
   client = TelegramClient('session_name', api_id, api_hash)
@@ -16,7 +17,7 @@ async def main():
     result = await client(functions.account.ReportPeerRequest(
       peer=p,
       reason=types.InputReportReasonOther(),
-      message='Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers.'
+      message=message
     ))
 
     print(p, result)
