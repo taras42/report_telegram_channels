@@ -16,12 +16,12 @@ A script to easily report multiple telegram channels at once. Instruction:
 2. Open cmd/terminal and install telethon (`pip3 install telethon`) telegram client
 3. Once you get your `api_id` and `api_hash`, run the python file attached to this message like this:
 ```shell
-python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3
+python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3 https://t.me/channel
 ```
 
 Example (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
-python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." @channel1 @channel2 @channel3
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." @channel1 @channel2 @channel3 https://t.me/channel
 ```
 
 ### Docker
@@ -33,7 +33,7 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the w
     ```
 3. Run:
     ```shell
-    docker run -it --rm report-telegram <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3
+    docker run -it --rm report-telegram <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3 https://t.me/channel
     ```
 
 ## UKR:
@@ -51,11 +51,11 @@ Python скрипт для оскаржування декількох теле�
 2. Відкрийте командний рядок(cmd)/термінал і встановіть telethon (`pip3 install telethon`) telegram клієнт
 3. Коли ви отримаєте свій `api_id` та `api_hash`, запустіть python скрипт з цього репозиторію (скачайте і запустіть з командного рядка):
 ```shell
-python3 report.py <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3
+python3 report.py <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3 https://t.me/channel
 ```
 Приклад (де api_id: 01234567, а api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
-python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." @channel1 @channel2 @channel3
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." @channel1 @channel2 @channel3 https://t.me/channel
 ```
 (повідомлення можливо краще відправляти на англ)
 
@@ -68,5 +68,5 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганд�
     ```
 3. Запуск:
     ```shell
-    docker run -it --rm report-telegram <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3
+    docker run -it --rm report-telegram <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3 https://t.me/channel
     ```
