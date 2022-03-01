@@ -19,6 +19,11 @@ A script to easily report multiple telegram channels at once. Instruction:
 python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3
 ```
 
+Example (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
+```shell
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." @channel1 @channel2 @channel3
+```
+
 ### Docker
 
 1. Install [Docker](https://www.docker.com/)
@@ -48,6 +53,11 @@ Python скрипт для оскаржування декількох теле�
 ```shell
 python3 report.py <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3
 ```
+Приклад (де api_id: 01234567, а api_hash: 0123456789abcdefghijklmnopqrstuw)
+```shell
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." @channel1 @channel2 @channel3
+```
+(повідомлення можливо краще відправляти на англ)
 
 ### Docker
 
