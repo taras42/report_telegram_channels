@@ -33,7 +33,6 @@ async def main():
     client = TelegramClient('session_name', api_id, api_hash)
     await client.start()
 
-
     if args.filepath is not None:
         # channels are taken from file
         peers = args.filepath.read().splitlines()
@@ -65,6 +64,7 @@ async def main():
         except:
             print('no user', p)
             continue
+
 
 if __name__ == "__main__":
     asyncio.run(main())

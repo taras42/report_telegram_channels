@@ -3,6 +3,8 @@ Easily report multiple telegram channels
 Легко оскаржуйте декілька телеграм каналів одночасно
 
 ## ENG
+Attention: use on your own risk - While the script will sleep 10 to 20 seconds between requests and 50 to 60 seconds between each 10 requests, telegram might ban your account if you will use this app to report huge amount of accounts in short time.
+It's better to use separate telegram account to use this app.
 
 Follow instructions [here](https://core.telegram.org/api/obtaining_api_id) 
 to obtain your `api_id` and `api_hash` for telegram client
@@ -14,7 +16,12 @@ A script to easily report multiple telegram channels at once. Instruction:
 2. Open cmd/terminal and install telethon (`pip3 install telethon`) telegram client
 3. Once you get your `api_id` and `api_hash`, run the python file attached to this message like this:
 ```shell
-python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3
+python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3 https://t.me/channel
+```
+
+Example (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
+```shell
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." @channel1 @channel2 @channel3 https://t.me/channel
 ```
 
 ### Docker
@@ -26,10 +33,13 @@ python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @ch
     ```
 3. Run:
     ```shell
-    docker run -it --rm report-telegram <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3
+    docker run -it --rm report-telegram <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3 https://t.me/channel
     ```
 
 ## UKR:
+
+Увага: використовуйте на свій страх і ризик - Програма буде очікувати від 10 до 20 секунд між кожним запитом та від 50 до 60 секунд кожні 10 запитів щоб змешити ризики, але телеграм може заблокувати ваш аккаунт якщо ви будете повідомляти про велику кількість аккаунтів за малий час.
+Краще зробити окремий телеграм акканунт для використання цієї програми.
 
 Слідуйте інструкціям [тут](https://core.telegram.org/api/obtaining_api_id)
 для того щоб отримати `api_id` та `api_hash` для telegram клієнту
@@ -41,8 +51,13 @@ Python скрипт для оскаржування декількох теле�
 2. Відкрийте командний рядок(cmd)/термінал і встановіть telethon (`pip3 install telethon`) telegram клієнт
 3. Коли ви отримаєте свій `api_id` та `api_hash`, запустіть python скрипт з цього репозиторію (скачайте і запустіть з командного рядка):
 ```shell
-python3 report.py <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3
+python3 report.py <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3 https://t.me/channel
 ```
+Приклад (де api_id: 01234567, а api_hash: 0123456789abcdefghijklmnopqrstuw)
+```shell
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." @channel1 @channel2 @channel3 https://t.me/channel
+```
+(повідомлення можливо краще відправляти на англ)
 
 ### Docker
 
@@ -53,5 +68,5 @@ python3 report.py <api_id> <api_hash> "<зміст_повідомлення>" @c
     ```
 3. Запуск:
     ```shell
-    docker run -it --rm report-telegram <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3
+    docker run -it --rm report-telegram <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3 https://t.me/channel
     ```
