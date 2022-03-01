@@ -3,6 +3,8 @@ Easily report multiple telegram channels
 Легко оскаржуйте декілька телеграм каналів одночасно
 
 ## ENG
+Attention: use on your own risk - telegram might ban your account if you will use this app to report huge amount of accounts in short time.
+It's better to use separate telegram account to use this app.
 
 Follow instructions [here](https://core.telegram.org/api/obtaining_api_id) 
 to obtain your `api_id` and `api_hash` for telegram client
@@ -30,6 +32,9 @@ python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @ch
     ```
 
 ## UKR:
+
+Увага: використовуйте на свій страх і ризик - телеграм може заблокувати ваш аккаунт якщо ви будете повідомляти про велику кількість аккаунтів за малий час.
+Краще зробити окремий телеграм акканунт для використання цієї програми.
 
 Слідуйте інструкціям [тут](https://core.telegram.org/api/obtaining_api_id)
 для того щоб отримати `api_id` та `api_hash` для telegram клієнту
