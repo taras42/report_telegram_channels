@@ -13,8 +13,9 @@ to obtain your `api_id` and `api_hash` for telegram client
 A script to easily report multiple telegram channels at once. Instruction:
 
 1. Install python3 on your PC (if you do this on Windows, check Add To PATH on installation)
-2. Open cmd/terminal and install required dependencies (`pip3 install -r requirements.txt`).
-3. You can specify channels manually using flags -c or --channels, or provide path to the .txt file where id of channels are stored with -f or --file flags.<br />Example with specifying channels manually (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
+2. Download zip folder from github, unpack.
+3. Open cmd/terminal got the unpacked folder and install required dependencies (`pip3 install -r requirements.txt`).
+4. You can specify channels manually using flags -c or --channels, or provide path to the .txt file where id of channels are stored with -f or --file flags.<br />Example with specifying channels manually (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
 python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." -c @channel1 @channel2 @channel3 https://t.me/channel
 ```
@@ -54,8 +55,9 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the w
 Python скрипт для оскаржування декількох телеграм каналів одночасно.
 
 1. Встановіть python3 на вашому комп'ютері (якщо ви на Windows, відмітьте Add To PATH при інсталяції)
-2. Відкрийте командний рядок(cmd)/термінал і встановіть потрібні залежності (`pip3 install -r requirements.txt`).
-3. Ви можете вводити канали самостійно, вказавши параметри -c або --channels, або ввести шлях до .txt файлу, вказавши параметри -f or --file, де зберігаються id потрібних телеграм каналів.
+2. Скачайте архів з проектом з гітхабу, розпакуйте
+3. Відкрийте командний рядок(cmd)/термінал, перейдіть у розпаковану папку з проектом і встановіть потрібні залежності (`pip3 install -r requirements.txt`).
+4. Ви можете вводити канали самостійно, вказавши параметри -c або --channels, або ввести шлях до .txt файлу, вказавши параметри -f or --file, де зберігаються id потрібних телеграм каналів.
 <br />Приклад з введенням каналів самостійно(де api_id: 01234567, а api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
 python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." -с @channel1 @channel2 @channel3 https://t.me/channel
