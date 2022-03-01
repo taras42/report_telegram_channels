@@ -13,17 +13,20 @@ to obtain your `api_id` and `api_hash` for telegram client
 A script to easily report multiple telegram channels at once. Instruction:
 
 1. Install python3 on your PC (if you do this on Windows, check Add To PATH on installation)
-2. Open cmd/terminal and install telethon (`pip3 install telethon`) telegram client
-3. Once you get your `api_id` and `api_hash`, run the python file attached to this message like this:
+2. Open cmd/terminal and install required dependencies (`pip3 install -r requirements.txt`).
+3. You can specify channels manually using flags -c or --channels, or provide path to the .txt file where id of channels are stored with -f or --file flags.<br />Example with specifying channels manually (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
-python3 report.py <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3 https://t.me/channel
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." -c @channel1 @channel2 @channel3 https://t.me/channel
 ```
-
-Example (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
+Example with providing path to the .txt file where channels are stored.
+<br />File channels.txt must look like this:<br />
+@channel1<br />
+@channel2<br />
+@channel3<br />
+Command (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
-python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." @channel1 @channel2 @channel3 https://t.me/channel
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." -f ./channels.txt
 ```
-
 ### Docker
 
 1. Install [Docker](https://www.docker.com/)
@@ -48,16 +51,23 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the w
 Python скрипт для оскаржування декількох телеграм каналів одночасно.
 
 1. Встановіть python3 на вашому комп'ютері (якщо ви на Windows, відмітьте Add To PATH при інсталяції)
-2. Відкрийте командний рядок(cmd)/термінал і встановіть telethon (`pip3 install telethon`) telegram клієнт
-3. Коли ви отримаєте свій `api_id` та `api_hash`, запустіть python скрипт з цього репозиторію (скачайте і запустіть з командного рядка):
+2. Відкрийте командний рядок(cmd)/термінал і встановіть потрібні залежності (`pip3 install -r requirements.txt`).
+3. Ви можете вводити канали самостійно, вказавши параметри -c або --channels, або ввести шлях до .txt файлу, вказавши параметри -f or --file, де зберігаються id потрібних телеграм каналів.
+<br />Приклад з введенням каналів самостійно(де api_id: 01234567, а api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
-python3 report.py <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3 https://t.me/channel
-```
-Приклад (де api_id: 01234567, а api_hash: 0123456789abcdefghijklmnopqrstuw)
-```shell
-python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." @channel1 @channel2 @channel3 https://t.me/channel
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." -с @channel1 @channel2 @channel3 https://t.me/channel
 ```
 (повідомлення можливо краще відправляти на англ)
+
+<br />Приклад у якому вказується шлях до .txt файлу, де зберігаються id потрібних телеграм каналів.
+<br />Файл channels.txt має виглядати таким чином:<br />
+@channel1<br />
+@channel2<br />
+@channel3<br />
+Команда (де api_id: 01234567, а api_hash: 0123456789abcdefghijklmnopqrstuw)
+```shell
+python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." -f ./channels.txt
+```
 
 ### Docker
 
@@ -69,4 +79,3 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганд�
 3. Запуск:
     ```shell
     docker run -it --rm report-telegram <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3 https://t.me/channel
-    ```
