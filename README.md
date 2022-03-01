@@ -36,9 +36,12 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the w
     ```
 3. Run:
     ```shell
-    docker run -it --rm report-telegram <api_id> <api_hash> "<report_message>" @channel1 @channel2 @channel3 https://t.me/channel
+    docker run -it --rm report-telegram <api_id> <api_hash> "<report_message>" -c @channel1 @channel2 @channel3 https://t.me/channel
     ```
-
+    Or:
+    ```shell
+    docker run -it --rm report-telegram <api_id> <api_hash> "<report_message>" -f ./channels.txt
+    ```
 ## UKR:
 
 Увага: використовуйте на свій страх і ризик - Програма буде очікувати від 10 до 20 секунд між кожним запитом та від 50 до 60 секунд кожні 10 запитів щоб змешити ризики, але телеграм може заблокувати ваш аккаунт якщо ви будете повідомляти про велику кількість аккаунтів за малий час.
@@ -78,4 +81,9 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганд�
     ```
 3. Запуск:
     ```shell
-    docker run -it --rm report-telegram <api_id> <api_hash> "<зміст_повідомлення>" @channel1 @channel2 @channel3 https://t.me/channel
+    docker run -it --rm report-telegram <api_id> <api_hash> "<зміст_повідомлення>" -c @channel1 @channel2 @channel3 https://t.me/channel
+    ```
+    Або:
+    ```shell
+    docker run -it --rm report-telegram <api_id> <api_hash> "<зміст_повідомлення>" -f ./channels.txt
+    ```
