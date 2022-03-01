@@ -19,11 +19,16 @@ A script to easily report multiple telegram channels at once. Instruction:
 ```shell
 python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." -c @channel1 @channel2 @channel3 https://t.me/channel
 ```
-Example with providing path to the .txt file where channels are stored.
-<br />File channels.txt must look like this:<br />
-@channel1<br />
-@channel2<br />
-@channel3<br />
+
+### Text file support
+Application supports loading channels to report from `.txt` file.
+
+Text file example (`channels.txt`):
+```text
+@channel1
+@channel2
+@channel3
+```
 Command (for api_id: 01234567, and api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
 python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the war in Ukraine. Propaganda of the murder of Ukrainians and Ukrainian soldiers." -f ./channels.txt
@@ -64,11 +69,16 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганд�
 ```
 (повідомлення можливо краще відправляти на англ)
 
-<br />Приклад у якому вказується шлях до .txt файлу, де зберігаються id потрібних телеграм каналів.
-<br />Файл channels.txt має виглядати таким чином:<br />
-@channel1<br />
-@channel2<br />
-@channel3<br />
+### Підтримка текстового файлу
+Додаток дозволяє завантажувати список аккаунтів з текстових файлів.
+
+Приклад текстового файлу (`channels.txt`):
+```text
+@channel1
+@channel2
+@channel3
+```
+
 Команда (де api_id: 01234567, а api_hash: 0123456789abcdefghijklmnopqrstuw)
 ```shell
 python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганда війни в Україні. Пропаганда вбивства українців і українських солдат." -f ./channels.txt
