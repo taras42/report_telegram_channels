@@ -2,6 +2,7 @@ import sys
 import asyncio
 import time
 import random
+import platform
 from telethon import TelegramClient, events, functions, types
 from argparse import ArgumentParser, FileType
 
@@ -61,10 +62,13 @@ async def main():
 
                 print('sleep for {}s...'.format(sleep_for))
                 time.sleep(sleep_for)
-        except:
-            print('no user', p)
+        except Exception as e:
+            print(e)
             continue
 
 
 if __name__ == "__main__":
+    if platform.system() == 'Windows':
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
     asyncio.run(main())
