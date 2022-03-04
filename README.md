@@ -40,6 +40,10 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Propaganda of the w
     ```shell
     docker build . -t report-telegram
     ```
+    On Windows (it's better to use gitbash, otherwise you'll have to add env var in some other way)
+    ```shell
+    DOCKER_BUILDKIT=0 docker build . -t report-telegram
+    ```
 3. Run:
     ```shell
     docker run -it --rm report-telegram <api_id> <api_hash> "<report_message>" -c @channel1 @channel2 @channel3 https://t.me/channel
@@ -90,6 +94,10 @@ python3 report.py 01234567 0123456789abcdefghijklmnopqrstuw "Пропаганд�
 2. Білд докер образу:
     ```shell
     docker build . -t report-telegram
+    ```
+    На Windows (краще використовувати gitbash, інакше прийдеться додавати змінну середовища засобами віндовс)
+    ```shell
+    DOCKER_BUILDKIT=0 docker build . -t report-telegram
     ```
 3. Запуск:
     ```shell
